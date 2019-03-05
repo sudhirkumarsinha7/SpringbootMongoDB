@@ -1,4 +1,4 @@
-package com.SpringbootMongoDB;
+package com.SpringbootMongoDB.model;
 
 
 
@@ -8,7 +8,6 @@ import java.util.Map;
 
 public class User {
 
-    private Integer id;
 
     private String name;
 
@@ -23,13 +22,8 @@ public class User {
     private Date creationDate = new Date();
     private Map<String, String> userSettings = new HashMap<>();
 
-    public Integer getId() {
-        return id;
-    }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+
 
     public String getName() {
         return name;

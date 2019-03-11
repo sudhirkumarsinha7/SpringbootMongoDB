@@ -23,8 +23,8 @@ public class UserService {
     public List<User> getAll(){
         return userRepository.findAll();
     }
-    public User getByFirstName(String firstName) {
-        return userRepository.findByName(firstName);
+    public User getByEmail(String name) {
+        return userRepository.findByName(name);
     }
     //Update operation
 //    public User update(String firstName, String lastName, int age) {
@@ -37,8 +37,8 @@ public class UserService {
     public void deleteAll() {
         userRepository.deleteAll();
     }
-    public void delete(String firstName) {
-        User p = userRepository.findByName(firstName);
+    public void delete(String name) {
+        User p = userRepository.findByName(name);
         userRepository.delete(p);
     }
 }

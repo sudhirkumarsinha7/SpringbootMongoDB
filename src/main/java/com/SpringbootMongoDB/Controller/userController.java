@@ -14,17 +14,17 @@ import java.util.List;
 public class userController {
     @Autowired
     private UserService userService;
-    @RequestMapping(value ="/create",method = RequestMethod.POST)
-    public String create(@RequestBody User user) {
+    @RequestMapping(value ="/adUser",method = RequestMethod.POST)
+    public String addUser(@RequestBody User user) {
         User p = userService.create(user);
         return p.toString();
     }
 
-    @RequestMapping(value="/get",method = RequestMethod.GET)
-    public User getUser(@RequestParam String firstName) {
-        return userService.getByFirstName(firstName);
+    @RequestMapping(value="/getUser",method = RequestMethod.POST)
+    public User getUser(@RequestParam String email) {
+        return userService.getByEmail(email);
     }
-    @RequestMapping(value="/getAll",method = RequestMethod.GET)
+    @RequestMapping(value="/getAllUser",method = RequestMethod.GET)
     public List<User> getAll(){
         return userService.getAll();
     }
@@ -33,13 +33,13 @@ public class userController {
         User p = userService.update(firstName, lastName, age);
         return p.toString();
     }*/
-    @RequestMapping(value="/delete",method = RequestMethod.DELETE)
+    @RequestMapping(value="/deleteUser",method = RequestMethod.DELETE)
 
-    public String delete(@RequestParam String firstName) {
-        userService.delete(firstName);
-        return "Deleted "+firstName;
+    public String delete(@RequestParam String name) {
+        userService.delete(name);
+        return "Deleted "+name;
     }
-    @RequestMapping(value="/deleteAll",method = RequestMethod.DELETE)
+    @RequestMapping(value="/deleteAllUser",method = RequestMethod.DELETE)
     public String deleteAll() {
         userService.deleteAll();
         return "Deleted all records";

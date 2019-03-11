@@ -18,7 +18,7 @@ public class Items {
         return itemName;
     }
 
-    public void setItemName(String name) {
+    public void setItemName(String itemName) {
         this.itemName = itemName;
     }
 
@@ -26,14 +26,14 @@ public class Items {
         return itemQuantity;
     }
 
-    public void setItemQuantity(String email) {
+    public void setItemQuantity(String itemQuantity) {
         this.itemQuantity = itemQuantity;
     }
     public String getItemUnit() {
         return itemUnit;
     }
 
-    public void setItemUnit(String password) {
+    public void setItemUnit(String itemUnit) {
         this.itemUnit = itemUnit;
     }
 
@@ -41,7 +41,7 @@ public class Items {
         return itemAvailability;
     }
 
-    public void setItemAvailabilitye(String username) {
+    public void setItemAvailabilitye(String itemAvailability) {
         this.itemAvailability = itemAvailability;
     }
 
@@ -49,7 +49,7 @@ public class Items {
         return itemImage;
     }
 
-    public void setItemImage(String address) {
+    public void setItemImage(String itemImage) {
         this.itemImage = itemImage;
     }
 
